@@ -7,6 +7,7 @@ import android.os.Handler
 import com.example.whatsapp.MainActivity
 import com.example.whatsapp.R
 import com.example.whatsapp.databinding.ActivitySplashScreenBinding
+import com.example.whatsapp.landigpage.LandingPageActivity
 
 class SplashScreen : AppCompatActivity() {
 
@@ -19,7 +20,7 @@ class SplashScreen : AppCompatActivity() {
 
         supportActionBar?.hide()
         Handler().postDelayed({
-            val intent = Intent(this@SplashScreen,MainActivity::class.java)
+            val intent = Intent(this@SplashScreen,LandingPageActivity::class.java)
             startActivity(intent)
             finish()
         },3000)
