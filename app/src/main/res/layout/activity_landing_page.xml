@@ -1,43 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".landigpage.LandingPageActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"/>
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:textStyle="bold"
-        android:text="@string/whatsapp"
-        android:textSize="30sp"
-        tools:ignore="MissingConstraints"/>
+        android:background="@color/green"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/black"
+        app:tabTextColor="@color/black"/>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:layout_width="match_parent"
-        android:layout_height="580dp"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:id="@+id/vp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-    <ImageView
-        android:id="@+id/iv_camera"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintLeft_toRightOf="@id/tv_title"
-        app:srcCompat="@android:drawable/ic_menu_camera"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:layout_marginStart="15dp"
-        app:layout_constraintLeft_toRightOf="@id/iv_camera"
-        android:id="@+id/iv_search"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="?android:attr/actionModeWebSearchDrawable"
-        tools:ignore="MissingConstraints" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
